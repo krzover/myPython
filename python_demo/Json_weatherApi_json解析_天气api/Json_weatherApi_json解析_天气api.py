@@ -2,8 +2,8 @@
 
 import requests
 import json
-
-url = 'http://api.map.baidu.com/telematics/v3/weather?location=%E9%83%91%E5%B7%9E%E5%B8%82&output=json&ak=TueGDhCvwI6fOrQnLM0qmXxY9N0OkOiQ&callback=?'
+set_name = raw_input('查询地点:')
+url = 'http://api.map.baidu.com/telematics/v3/weather?location=%s&output=json&ak=TueGDhCvwI6fOrQnLM0qmXxY9N0OkOiQ&callback=?'%(set_name)
 #获取json信息并得到一个json字典
 def weather():    
     response = requests.get(url)

@@ -1,0 +1,19 @@
+1487294120645	geckodriver	INFO	Listening on 127.0.0.1:61760
+1487294122583	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.54YaNnB1gY2r
+1487294122583	geckodriver::marionette	INFO	Starting browser d:\Mozilla Firefox\firefox.exe
+1487294122603	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61766
+1487294125352	Marionette	INFO	Listening on port 61766
+[Child 3232] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4924] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:551:9
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker/<@resource://gre/components/nsAsyncShutdown.js:157:15
+Promise@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:388:5
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker@resource://gre/components/nsAsyncShutdown.js:153:29
+Barrier/this.client.addBlocker/promise</trigger@resource://gre/modules/AsyncShutdown.jsm:720:23
+Barrier.prototype<._wait@resource://gre/modules/AsyncShutdown.jsm:867:7
+Barrier.prototype<.wait@resource://gre/modules/AsyncShutdown.jsm:851:28
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:534:17
+
