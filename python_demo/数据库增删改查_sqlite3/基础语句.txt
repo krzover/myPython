@@ -1,0 +1,29 @@
+练习：
+1,创建一个学生成绩表 Grades，学号  姓名  成绩  名次
+CREATE TABLE Grades (num INTEGER PRIMARY KEY,name TEXT,grade INTEGER,rank INTEGER)
+
+2，往表中插入10数据
+INSERT INTO Grades (num,name,grade,rank) VALUES (1,’zhangsan’,398,20)
+
+
+3，查询成绩大于60分的人的名字
+SELECT name,grade FROM grades WHERE grade > 60
+
+4，查询成绩小于60分的人的个数
+SELECT COUNT(*) FROM grades WHERE grade < 60
+
+5，把成绩小于60分的人的成绩修改为60分
+UPDATE grades SET grade = 60 WHERE grade < 60
+
+6，删除所有学号小于100的人的信息
+DELETE FROM grades WHERE num < 100
+
+
+6，查询姓“张”的人的所有信息
+SELECT * FROM grades WHERE name LIKE '张%'
+
+7，查询所有人的成绩，按照成绩从高到低排列
+SELECT grade FROM grades ORDER BY grade DESC
+
+8，查询所有人的成绩，按照名次从小到大排列
+SELECT grade FROM grades ORDER BY rank ASC
