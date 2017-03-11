@@ -9,20 +9,18 @@ while 1:
     if chose == 1:
         print '<>输出所有信息'
         rel = db_admin.list_db()
-        for x in rel:
-            print u"|id:%d|姓名:%s|性别:%d|年龄:%d|手机号:%d|"%(x[0],x[1],x[2],x[3],x[4])
+        db_class.for_rel(rel)
+       
     elif chose == 2:
         print '<>查找名字'
         name = raw_input('查找名字')
         rel = db_admin.name_find(name)
-        for x in rel:
-            print u"|id:%d|姓名:%s|性别:%d|年龄:%d|手机号:%d|"%(x[0],x[1],x[2],x[3],x[4])
+        db_class.for_rel(rel)
     elif chose == 3:
         print '<>查找手机号'
         num = raw_input('查找手机号:')
         rel = db_admin.num_find(num)
-        for x in rel:
-            print u"|id:%d|姓名:%s|性别:%d|年龄:%d|手机号:%d|"%(x[0],x[1],x[2],x[3],x[4])
+        db_class.for_rel(rel)
     elif chose == 4: 
         print '<>添加信息'  
         id = input('id:')
