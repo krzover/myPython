@@ -6,30 +6,67 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>232</width>
-    <height>277</height>
+    <width>250</width>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_del">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>20</y>
-      <width>111</width>
-      <height>41</height>
+      <x>0</x>
+      <y>110</y>
+      <width>251</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>191</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>30</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>模糊查找</string>
+     <string>删除</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>51</y>
+      <width>91</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>id删除</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -38,8 +75,8 @@
    <widget class="QLineEdit" name="p_id">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>130</y>
+      <x>110</x>
+      <y>50</y>
       <width>124</width>
       <height>31</height>
      </rect>
@@ -48,29 +85,11 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>180</y>
-      <width>71</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>查找</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>0</y>
+      <x>160</x>
+      <y>10</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -79,39 +98,13 @@
      <string>返回</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioname">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>70</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>按照name查找</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radiophone">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>70</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>按照phone查找</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>232</width>
+     <width>250</width>
      <height>23</height>
     </rect>
    </property>
@@ -124,15 +117,15 @@
    <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>find_sql()</slot>
+   <slot>del_sql()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>170</x>
-     <y>283</y>
+     <x>97</x>
+     <y>253</y>
     </hint>
     <hint type="destinationlabel">
-     <x>118</x>
-     <y>286</y>
+     <x>107</x>
+     <y>283</y>
     </hint>
    </hints>
   </connection>
@@ -143,18 +136,18 @@
    <slot>back_main()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>217</x>
-     <y>48</y>
+     <x>195</x>
+     <y>50</y>
     </hint>
     <hint type="destinationlabel">
-     <x>159</x>
-     <y>47</y>
+     <x>124</x>
+     <y>45</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>find_sql()</slot>
+  <slot>del_sql()</slot>
   <slot>back_main()</slot>
  </slots>
 </ui>

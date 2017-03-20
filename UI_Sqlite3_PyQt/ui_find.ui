@@ -6,37 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>238</width>
-    <height>208</height>
+    <width>279</width>
+    <height>327</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>110</y>
-      <width>191</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>删除</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>60</y>
+      <x>90</x>
+      <y>40</y>
       <width>91</width>
       <height>27</height>
      </rect>
@@ -47,7 +29,7 @@
      </font>
     </property>
     <property name="text">
-     <string>删除ID</string>
+     <string>模糊查找</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -57,7 +39,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>60</y>
+      <y>160</y>
       <width>124</width>
       <height>31</height>
      </rect>
@@ -66,11 +48,29 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>220</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>查找</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>0</y>
+      <x>200</x>
+      <y>10</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -79,25 +79,30 @@
      <string>返回</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QRadioButton" name="radioname">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>20</y>
-      <width>111</width>
-      <height>31</height>
+      <x>30</x>
+      <y>90</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
+    <property name="text">
+     <string>按照name查找</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radiophone">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>90</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
     </property>
     <property name="text">
-     <string>根据ID删除</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>按照phone查找</string>
     </property>
    </widget>
   </widget>
@@ -106,7 +111,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>238</width>
+     <width>279</width>
      <height>23</height>
     </rect>
    </property>
@@ -119,15 +124,15 @@
    <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>del_sql()</slot>
+   <slot>find_sql()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>97</x>
-     <y>253</y>
+     <x>170</x>
+     <y>283</y>
     </hint>
     <hint type="destinationlabel">
-     <x>107</x>
-     <y>283</y>
+     <x>118</x>
+     <y>286</y>
     </hint>
    </hints>
   </connection>
@@ -138,18 +143,18 @@
    <slot>back_main()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>195</x>
-     <y>50</y>
+     <x>217</x>
+     <y>48</y>
     </hint>
     <hint type="destinationlabel">
-     <x>124</x>
-     <y>45</y>
+     <x>159</x>
+     <y>47</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>del_sql()</slot>
+  <slot>find_sql()</slot>
   <slot>back_main()</slot>
  </slots>
 </ui>
