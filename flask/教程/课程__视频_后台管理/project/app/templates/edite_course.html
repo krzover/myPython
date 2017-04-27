@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<style type="text/css">
+    header{
+        background: #eee;
+        height: 7rem;
+        margin-bottom: 20px;
+    }
+
+    header h1{
+        font-size: 3rem;
+    }
+    .mynav{
+        /*!important 优先加载，必须加载*/
+        margin-bottom: 0 !important;
+    }
+    
+
+    
+</style>
+{% endblock %}
+
+
+ {% block content%}
+<!-- 头部信息 -->
+<header>
+    <div class="container">
+        <h1>编辑课程</h1>
+    </div>
+    
+</header>
+
+<div class="container">
+
+<form class="form-horizontal" role="form" method="post" action="/commit_edite_course/{{data.course.id}}">
+  <div class="form-group">
+    <label for="firstname" class="col-sm-2 control-label">名称</label>
+    <div class="col-sm-10">
+      <input type="text" name="name" class="form-control" id="firstname" placeholder="请输入名字" value="{{data.course.title}}">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastname" class="col-sm-2 control-label">备注</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" name="msg" placeholder="请输入介绍" rows="3">{{data.course.abstract}}</textarea>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">edite</button>
+    </div>
+  </div>
+</form>
+
+
+</div>
+
+
+
+ {% endblock %}

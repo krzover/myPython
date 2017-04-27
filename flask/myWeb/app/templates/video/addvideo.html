@@ -1,0 +1,80 @@
+{% extends 'base.html '%}
+
+{% block content%}
+<div class="container">
+
+<form class="form-horizontal" role="form" method="post" action="/commit_add/{{id}}">
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">title</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="title" placeholder="请输入title">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="time" class="col-sm-2 control-label">time</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="time" placeholder="time">
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label for="hits" class="col-sm-2 control-label">hits</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="hits" placeholder="hits">
+    </div>
+  </div>
+
+
+
+  `<div class="form-group">
+    <label for="abstract" class="col-sm-2 control-label">abstract</label>
+    <div class="col-sm-10">
+      <textarea id="abstract" name="abstract" class="form-control" rows="3" placeholder="输入abstract"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+<!-- 5555555555555555555 -->
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              选择老师 
+              <span class="caret"></span> 
+            </button>
+            <ul class="dropdown-menu">
+            {%for item in data%}
+              <li><a href="#" onclick="changechoselabel('{{item.id}}')">{{item.name}}</a></li>
+              {%endfor%}
+            </ul>
+          </div><!-- /btn-group -->
+          <input type="text" id="choselabel" readonly class="form-control" value='' name="teacherlabel">
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 --><br>
+    </div><!-- /.row -->
+
+<!-- 5555555555555555555 -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">提交</button>
+    </div>
+  </div>
+</form>
+
+
+
+
+</div>
+{% endblock %}
+
+{% block script %}
+<!-- {{url_for('static',filename='course.js') }}-->
+<script type="text/javascript" src="/static/video.js"></script>
+{% endblock %}

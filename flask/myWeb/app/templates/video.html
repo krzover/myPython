@@ -1,0 +1,50 @@
+{% extends 'base.html '%}
+
+{% block content%}
+<div class="container">
+<table class="table table-bordered">
+  <caption><button type="button" class="btn btn-primary btn-md glyphicon glyphicon-plus" action="/addvideo/{{data.c_id}}"> 提交</button></caption>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>time</th>
+      <th>hits</th>
+      <th>addtime</th>
+      <th>abstract</th>
+      <th>t_id</th>
+      <th>编辑</th>
+      <th>删除</th>
+    </tr>
+  </thead>
+  <tbody>
+{%for item in data%}
+    <tr>
+      <td>{{item.title}}</td>
+      <td>{{item.time}}</td>
+      <td>{{item.hits}}</td>
+      <td>{{item.addtime}}</td>
+      <td>{{item.abstract}}</td>
+      <td>{{item.t_id}}</td>
+      <td>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-edit" ></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" >
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+    </tr>
+{%endfor%}
+  </tbody>
+
+</table>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<!-- {{url_for('static',filename='course.js') }}-->
+<script type="text/javascript" src="/static/video.js"></script>
+{% endblock %}

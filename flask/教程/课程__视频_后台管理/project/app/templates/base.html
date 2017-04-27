@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>base</title>
+
+
+    {% block styles %}{% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+
+<nav class="navbar navbar-inverse mynav" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">菜鸟教程</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">iOS</a></li>
+            <li><a href="/course">SVN</a></li>
+           
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right"> 
+        {% if data.islogin %}
+        <li><a href="/logout"><span class="   glyphicon glyphicon-log-out"></span> 注销</a></li>
+        {% else %}
+         <li><a href="/register"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+        {% endif %}
+            
+        </ul> 
+
+
+    </div>
+    </div>
+</nav>
+
+
+
+
+
+
+    {% block content%}{% endblock %}
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+     
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- 自定义的js要调用jQuery，所以要在引入jQuery之后引入 -->
+    {% block script %}{% endblock %}
+
+
+</body>
+</html>

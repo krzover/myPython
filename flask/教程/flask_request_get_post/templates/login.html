@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login</title>
+</head>
+<body>
+<!--特殊情况情况  /commit?email=qq 相当于get，如果设置为post请求方式，相当于前半部分是get后半部分是post-->
+<!-- 一般都是纯get或者纯post -->
+    <form action="/commit?email=qq" method="post">
+        <input type="text" name="name" placeholder="请输入用户名">
+        <input type="password" name="psw" placeholder="请输入密码">
+        <input type="submit" name="" value="login">
+    </form>
+</body>
+</html>

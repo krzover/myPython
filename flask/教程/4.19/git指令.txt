@@ -1,0 +1,19 @@
+ls 显示文件夹内部的所有文件（windows没这个指令，Linux ，macos有或者下载一个支持这个指令的程序）
+ls -ah 显示文件夹内部的所有文件，包括隐藏文件
+
+commit只能提交 已经添加到缓存区的代码（add之后的代码），没有add的是提交不上去的
+
+git add 文件名         》添加文件
+git commit -m  说明信息  》 提交文件
+git status 		》观察版本库状态
+git diff		》比较和上次提交的差别
+git log			>日志信息，关掉电脑就不显示了
+git reflog		>精简版日志信息，永久显示
+git checkout -- test.txt 》撤销工作区的代码（没有add过的代码）
+git reset HEAD test.txt 》撤销缓存区的代码，回到工作区（已经add过的代码）
+git reset --hard 版本号 >撤回到指定版本
+git branch		>查看分支
+git branch 名字		》新建分支
+git checkout 名字	》切换分支
+git branch -d 名字	》删除分支
+git merge 名字		》合并分支
